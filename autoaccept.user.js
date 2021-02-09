@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  https://steamcommunity.com/id/Podrubatov/
 // @author       Podrubatov
-// @match        https://fastcup.net/*
+// @match        https://cs.fastcup.net/*
 // @grant        none
 // ==/UserScript==
 
