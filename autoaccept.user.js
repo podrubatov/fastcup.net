@@ -5,6 +5,7 @@
 // @description  https://steamcommunity.com/id/Podrubatov/
 // @author       Podrubatov
 // @match        https://cs.fastcup.net/*
+// @match        https://csgo.fastcup.net/*
 // @grant        none
 // ==/UserScript==
 
