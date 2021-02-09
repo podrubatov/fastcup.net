@@ -11,9 +11,9 @@
 (function() {
     'use strict';
 setInterval( () => {
-    let btn = document.document.querySelectorAll('._27M3P');
-    if( btn.length ) {
-        btn[0].click();
+            let btn = document.querySelectorAll('.oRTKZ');
+            if( btn.length && btn[0].innerText.toLowerCase() == 'готов к игре' ) {
+                btn[0].click();
     }
 }, 2000 )
     // Your code here...
