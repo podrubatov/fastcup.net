@@ -11,7 +11,7 @@
 (function() {
     'use strict';
 setInterval( () => {
-    let btn = document.getElementsByClassName("oRTKZ 2dQ- _27M3P");
+    let btn = document.document.querySelectorAll('._27M3P');
     if( btn.length ) {
         btn[0].click();
     }
