@@ -15,13 +15,18 @@
 
 		let parent = $('div._3cgCe');
 		let currentUrl = window.location.href;
+		let steamUrl = $('._2uQMM > a:first-child');
 
-		let steamid = String($('._2uQMM > a:first-child').attr('href')).split('/').pop();
-		let btnid = 'steam-' + steamid;
-
-		if( currentUrl.includes("fastcup") && parent.length && steamid.length && !$(btnid).length ) {
-			let faceit = $(`<div id="${btnid}" class="_2uQMM"><a href="${urlFaceit}" target="_blank" rel="noopener noreferrer" class="_33xKn _1Az77"><span>FACEIT</span></a></div>`);
-        	parent.append(faceit);
+		if( currentUrl.includes("fastcup") && parent.length && steamUrl.length ) {
+			let steamid = String(steamUrl.attr('href')).split('/').pop();
+			let btnid = 'steam-' + steamid;
+			if( !$(btnid).length ) {
+				let urlFaceit = `https://faceitfinder.com/profile/${steamid}`;
+				let faceit = $(`<div id="${btnid}" class="_2uQMM add-faceit-btn"><a href="${urlFaceit}" target="_blank" rel="noopener noreferrer" class="_33xKn _1Az77"><span>FACEIT</span></a></div>`);
+				parent.find('.add-faceit-btn').remove();
+        		parent.append(faceit);
+			}
 		}
+
 	});
 })();
